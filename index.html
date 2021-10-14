@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>CoctailsStorage</title>
+</head>
+<body>
+    <div id="root">
+        <div id="buttons">
+            <button id='modal_add' class="btn">Ввод рецепта</button>
+            <button id='modal_change' class="btn">Изменение рецепта</button>
+            <button id='modal_del' class="btn">Удаление рецепта</button>
+            <button id='modal_getOne' class="btn">Рецепт напитка</button>
+            <button id='modal_getList' class="btn">Перечень рецептов</button>
+        </div > 
+        
+        
+            <div id = "queries" class = "modal show-modal" style="display: none">
+                <span class="close-btn">&times;</span> 
+                <div id="add_recipe_div" style="display: none">
+                    <form id="recipe_form">
+                        <input id="coctailName" type="text" name="coctailName" placeholder="Введите название коктейля"><br>              
+                        <label for="isAlcoholic"> <input type="checkbox" id="isAlcoholic" name="isAlcoholic" value="isAlcoholic"> Установите флажок, если напиток алкогольный</label><br>
+                        <textarea id="ingredients" maxlength="5000" cols="30" rows="5" placeholder="Введите ингредиенты через запятую"></textarea><br>
+                        <textarea id="recipe" maxlength="5000" cols="30" rows="10" placeholder="Введите рецепт"></textarea><br>          
+                        <button type="button" id="add_recipe_button" class="btn-styled">Добавить</button>
+                    </form>
+                </div>
+                <div id="del_recipe_div"  style="display: none">
+                    <input id="delCoctailName" type="text" name="delCoctailName" placeholder="Введите название коктейля, рецепт которого хотите удалить">
+                    <button type="button" id="del_recipe_button" class="btn-styled">Удалить</button>                   
+                </div>
+                <div id="show_recipe_div"  style="display: none">
+                    <input id="showCoctailName" type="text" name="showCoctailName" placeholder="Введите название коктейля, рецепт которого хотите увидеть">
+                    <button type="button" id="show_recipe_button" class="btn-styled">Показать рецепт</button>                    
+                </div>
+            </div>        
+    </div>
+    
+    <script src="HashStorage.js"></script>
+    <script src="coctailStorage.js"></script>
+    <script src="actions.js"></script> 
+   
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+ body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;  
+  font-family: 'Helvetica', sans-serif;
+} 
+
+input[type=text], textarea {
+  padding:10px;
+  margin:10px 0; 
+  width: 90%;
+  font-family:inherit;
+  font-size: small;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+}
+label {
+  font-size: small;
+}
+input #isAlcoholic{
+  width: 10%;
+}
+textarea {
+  width: 90%;
+  resize: vertical;  
+}
+#ingredients {
+  height: 100px;
+}
+#recipe { 
+  height: 150px;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+table {
+  border-collapse: collapse;
+  border: 3px solid grey;
+}
+th, td {
+  border: 1px solid grey;
+  padding: 20px;
+}
